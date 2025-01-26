@@ -13,7 +13,7 @@
         }
 
         header {
-            height: 50vh; /* Adjust height as needed */
+            height: 60vh; /* Adjust height as needed */
             background-color: #000;
             color: #fff;
             display: flex;
@@ -63,7 +63,7 @@
         }
 
         .logo {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
             text-transform: uppercase;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -100,10 +100,18 @@
         ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         li {
-            margin-bottom: 15px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px; 
         }
 
         a {
@@ -113,7 +121,7 @@
 
         .feedback-btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #007bff;
             color: #fff;
             border-radius: 5px;
@@ -122,6 +130,16 @@
 
         .contact-link {
             margin-top: 20px;
+        }
+
+        .about-section {
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -137,11 +155,31 @@
     <section>
         <h2>Our Services</h2>
         <ul>
-            <li>Copywriting</li>
-            <li>Data Entry</li>
-            <li>Web Development</li>
-            <li>Social Page Handling</li>
+            <li>
+                <h3>Copywriting</h3>
+                <p>Crafting compelling content that resonates with your audience.</p>
+            </li>
+            <li>
+                <h3>Data Entry</h3>
+                <p>Accurate and efficient data entry to streamline your business processes.</p>
+            </li>
+            <li>
+                <h3>Web Development</h3>
+                <p>Creating stunning and functional websites that meet your business goals.</p>
+            </li>
+            <li>
+                <h3>Social Media Management</h3>
+                <p>Growing your online presence and engaging your audience on social media.</p>
+            </li>
         </ul>
+    </section>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Kleverix Media is a team of passionate professionals dedicated to helping businesses succeed in the digital world. We offer a range of services to meet your unique needs, from creating engaging content to building a strong online presence.</p>
+            <p>We believe in building long-term relationships with our clients and providing exceptional customer service. Let us help you achieve your business goals.</p>
+        </div>
     </section>
 
     <section>
@@ -157,7 +195,7 @@
         const ctx = canvas.getContext('2d');
 
         const numStars = 200;
-        const stars =;
+        const stars = [];
 
         for (let i = 0; i < numStars; i++) {
             stars.push({

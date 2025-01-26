@@ -3,226 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kleverix Media</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            height: 60vh; /* Adjust height as needed */
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .universe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-        }
-
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; 
-        }
-
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background-color: #fff;
-            border-radius: 50%;
-            animation: twinkle 1s infinite;
-        }
-
-        @keyframes twinkle {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .logo {
-            font-size: 4rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            animation: motion-type 3s infinite;
-        }
-
-        @keyframes motion-type {
-            0% {
-                transform: translateY(0);
-            }
-            25% {
-                transform: translateY(-10px);
-            }
-            50% {
-                transform: translateY(0);
-            }
-            75% {
-                transform: translateY(10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        section {
-            padding: 50px;
-            text-align: center;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        li {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 300px; 
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .feedback-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .contact-link {
-            margin-top: 20px;
-        }
-
-        .about-section {
-            padding: 50px;
-            background-color: #f5f5f5;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+    <title>Kleverix Media - Digital Solutions</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <header>
-        <div class="universe">
-            <canvas id="starfield" width="100%" height="100%"></canvas>
+        <nav>
+            <div class="logo">
+                <h1>Kleverix Media</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Unlocking Digital Growth</h1>
+                <p>We craft impactful digital experiences that drive results.</p>
+                <a href="#contact" class="btn">Get a Free Quote</a>
+            </div>
         </div>
-        <h1 class="logo">Kleverix Media</h1>
     </header>
 
-    <section>
-        <h2>Our Services</h2>
-        <ul>
-            <li>
-                <h3>Copywriting</h3>
-                <p>Crafting compelling content that resonates with your audience.</p>
-            </li>
-            <li>
-                <h3>Data Entry</h3>
-                <p>Accurate and efficient data entry to streamline your business processes.</p>
-            </li>
-            <li>
-                <h3>Web Development</h3>
-                <p>Creating stunning and functional websites that meet your business goals.</p>
-            </li>
-            <li>
-                <h3>Social Media Management</h3>
-                <p>Growing your online presence and engaging your audience on social media.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="about-section">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <p>Kleverix Media is a team of passionate professionals dedicated to helping businesses succeed in the digital world. We offer a range of services to meet your unique needs, from creating engaging content to building a strong online presence.</p>
-            <p>We believe in building long-term relationships with our clients and providing exceptional customer service. Let us help you achieve your business goals.</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Kleverix Media</h2>
+            <p>Kleverix Media is a leading digital agency specializing in innovative solutions that help businesses thrive in the digital world. We are passionate about crafting compelling brand stories and delivering measurable results.</p>
+            <p>Our team of experienced professionals combines creativity, strategy, and technology to provide a comprehensive range of digital services tailored to your specific needs.</p>
         </div>
     </section>
 
-    <section>
-        <a href="#" class="feedback-btn">Give Feedback</a> 
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Digital Strategy</h3>
+                    <p>We develop customized digital strategies aligned with your business goals.</p>
+                </div>
+                <div class="card">
+                    <h3>Web Design & Development</h3>
+                    <p>We create stunning and user-friendly websites that leave a lasting impression.</p>
+                </div>
+                <div class="card">
+                    <h3>Content Marketing</h3>
+                    <p>We produce high-quality content that engages your audience and drives conversions.</p>
+                </div>
+                <div class="card">
+                    <h3>SEO & SEM</h3>
+                    <p>We optimize your online presence to improve search engine rankings and drive organic traffic.</p>
+                </div>
+                <div class="card">
+                    <h3>Social Media Marketing</h3>
+                    <p>We manage your social media presence to build brand awareness and engage your audience.</p>
+                </div>
+                <div class="card">
+                    <h3>Paid Advertising</h3>
+                    <p>We run targeted ad campaigns to reach your ideal customers and maximize ROI.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="contact-link">
-        <p>Contact: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/portfolio1.jpg" alt="Portfolio Item 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio2.jpg" alt="Portfolio Item 2">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio3.jpg" alt="Portfolio Item 3">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script>
-        const canvas = document.getElementById('starfield');
-        const ctx = canvas.getContext('2d');
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-        const numStars = 200;
-        const stars = [];
-
-        for (let i = 0; i < numStars; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 1.5
-            });
-        }
-
-        function drawStars() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#fff';
-
-            stars.forEach(star => {
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
-                ctx.fill();
-            });
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            drawStars();
-        }
-
-        animate();
-    </script>
+    <footer>
+        <p>&copy; 2023 Kleverix Media. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
+
+**CSS (style.css):**
+
+```css
+/* Basic Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #f0f0f0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Sections */
+.section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* 3 columns with 20px gutters */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design (Optional) */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

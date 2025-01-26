@@ -5,39 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleverix Media</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <style>
         body {
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .dark {
-            background-color: #333;
-            color: #111111;
+        .hero {
+            background-image: linear-gradient(to bottom, #f7f7f7, #ffffff);
+            padding: 100px;
+            text-align: center;
         }
-        .light {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .section {
+        .services {
             padding: 50px;
+            background-color: #f7f7f7;
         }
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .feedback {
+            padding: 50px;
+            background-color: #ffffff;
         }
-        .card img {
-            height: 150px;
-            width: 100%;
-            object-fit: cover;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        .contact {
+            padding: 50px;
+            background-color: #f7f7f7;
+        }
+        .footer {
+            padding: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Kleverix Media</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
@@ -59,86 +59,72 @@
             </ul>
         </div>
     </nav>
-    <section id="home" class="section light">
-        <div class="container">
-            <h1 class="display-4">Welcome to Kleverix Media</h1>
-            <p class="lead">We provide a wide range of services to help you grow your business.</p>
-        </div>
-    </section>
-    <section id="services" class="section light">
-        <div class="container">
-            <h2 class="display-5">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://images.app.goo.gl/uvNFGdbZPvq3MaCg6" alt="Copywriting">
-                        <div class="card-body">
-                            <h5 class="card-title">Copywriting</h5>
-                            <p class="card-text">We craft compelling copy to engage your audience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/300x150/?office" alt="Data Entry">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Entry</h5>
-                            <p class="card-text">We provide accurate and efficient data entry services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/300x150/?web-design" alt="Website Designing">
-                        <div class="card-body">
-                            <h5 class="card-title">Website Designing</h5>
-                            <p class="card-text">We design stunning websites to showcase your brand.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://source.unsplash.com/300x150/?social-media" alt="Social Media Handling">
-                        <div class="card-body">
-                            <h5 class="card-title">Social Media Handling</h5>
-                            <p class="card-text">We help you manage your social media presence.</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="hero">
+        <h1>Welcome to Kleverix Media</h1>
+        <p>We provide top-notch services in copywriting, data entry, website designing, and social media handling.</p>
+        <button type="button" class="btn btn-primary">Learn More</button>
+    </div>
+    <div class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://picsum.photos/200/304" alt="Copywriting" width="100%">
+                <h3>Copywriting</h3>
+                <p>We craft compelling content that drives results.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/200/301" alt="Data Entry" width="100%">
+                <h3>Data Entry</h3>
+                <p>Accurate and efficient data entry services for your business.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/200/302" alt="Website Designing" width="100%">
+                <h3>Website Designing</h3>
+                <p>We build stunning websites that convert visitors into customers.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="https://picsum.photos/200/303" alt="Social Media Handling" width="100%">
+                <h3>Social Media Handling</h3>
+                <p>Boost your online presence with our social media services.</p>
             </div>
         </div>
-    </section>
-    <section id="feedback" class="section dark">
-        <div class="container">
-            <h2 class="display-5 text-light">Feedback</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name" class="text-light">Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="email" class="text-light">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label for="feedback" class="text-light">Feedback:</label>
-                    <textarea class="form-control" id="feedback" rows="3" placeholder="Enter your feedback"></textarea>
-                </div>
-                <button type="submit" class="btn btn-light">Submit</button>
-            </form>
+    </div>
+    <div class="feedback" id="feedback">
+        <h2>Feedback</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +1 123 456 7890</p>
+        <p>Email: [info@kleverixmedia.com](mailto:info@kleverixmedia.com)</p>
+        <p>Address: 123 Main St, Anytown, USA</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
-    <section id="contact" class="section light">
-        <div class="container">
-            <h2 class="display-5">Contact Us</h2>
-            <p class="lead">Get in touch with us for more information.</p>
-            <p>Email: <a href="mailto:info@kleverixmedia.com">info@kleverixmedia.com</a></p>
-            <p>Phone: +91 9451450367,+91 70681 00162</p>
-            <p>Address: Kleverix Media,U.P.,INDIA</p>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Kleverix Media. All rights reserved.</p>
+        <a href="#services">Services</a> | <a href="#feedback">Feedback</a> | <a href="#contact">Contact</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourkit.js"></script>
 </body>
 </html>

@@ -3,41 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tata Replica Site</title>
+    <title>Kleverix</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-image: linear-gradient(to bottom, #000, #333), url('https://wallpapercave.com/wp/wp4056419.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
         }
         .hero {
-            background-image: linear-gradient(to bottom, #fff, #f0f0f0);
-            background-size: 100% 300px;
-            background-position: 0% 100%;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #fff;
         }
-        .card {
-            margin: 20px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .hero h1 {
+            font-size: 48px;
         }
-        .testimonial {
-            background-color: #f0f0f0;
+        .about {
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
-            border-radius: 10px;
+            color: #fff;
+        }
+        .modal-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Tata</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Kleverix</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,10 +55,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
+                    <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -61,112 +63,72 @@
             </ul>
         </div>
     </nav>
-    <section class="hero">
-        <h1>Welcome to Tata</h1>
-        <p>We are a leading company in the industry</p>
-        <button class="btn btn-primary">Learn More</button>
-    </section>
-    <section class="about">
-        <div class="container">
-            <h2 class="text-center">About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="https://via.placeholder.com/400x300" alt="About Image">
-                </div>
-                <div class="col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
+    <div class="hero">
+        <h1>Welcome to Kleverix</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">
+            Learn More
+        </button>
+    </div>
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Kleverix is a leading company in the industry, providing innovative solutions to our clients.</p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">
+            Read More
+        </button>
+    </div>
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Service 1</h3>
+                <p>This is our first service, providing high-quality solutions to our clients.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Service 2</h3>
+                <p>This is our second service, providing innovative solutions to our clients.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Service 3</h3>
+                <p>This is our third service, providing expert solutions to our clients.</p>
             </div>
         </div>
-    </section>
-    <section class="products">
-        <div class="container">
-            <h2 class="text-center">Our Products</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/200x150" alt="Product Image">
-                        <h5>Product 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/200x150" alt="Product Image">
-                        <h5>Product 2</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/200x150" alt="Product Image">
-                        <h5>Product 3</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="text-center">Testimonials</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-                        <img src="https://via.placeholder.com/50x50" alt="Testimonial Image">
-                        <h5>John Doe</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-                        <img src="https://via.placeholder.com/50x50" alt="Testimonial Image">
-                        <h5>Jane Doe</h5>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-                        <img src="https://via.placeholder.com/50x50" alt="Testimonial Image">
-                        <h5>Bob Smith</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> 123-456-7890</li>
-                        <li><i class="fas fa-envelope"></i> example@example.com</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <ul>
-                        <li><i class="fab fa-facebook"></i> Facebook</li>
-                        <li><i class="fab fa-twitter"></i> Twitter</li>
-                        <li><i class="fab fa-instagram"></i> Instagram</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>About Us</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-        </div>
+    </div>
+    <div class="contact">
+        <h2>Get in Touch</h2>
+        <p>Contact us to learn more about our services and how we can help you.</p>
+        <ul>
+            <li><i class="fas fa-phone"></i> 123-456-7890</li>
+            <li><i class="fas fa-envelope"></i> info@kleverix.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown, USA</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Kleverix. All rights reserved.</p>
+        <ul>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-linkedin-in"></i></li>
+        </ul>
     </footer>
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">About Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Kleverix is a leading company in the industry, providing innovative solutions to our clients. Our mission is to provide high-quality services that meet the needs of our clients.</p>
+                    <p>We have a team of expert professionals who are dedicated to providing the best possible solutions to our clients. We believe in building long-term relationships with our clients and providing them with the best possible service.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>

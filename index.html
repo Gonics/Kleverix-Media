@@ -4,106 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleverix Media</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <style>
         body {
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
-        header {
-            background: #007bff;
+        .dark {
+            background-color: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
         }
-        nav {
-            margin: 20px 0;
+        .light {
+            background-color: #f0f0f0;
+            color: #333;
         }
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
+        .section {
+            padding: 50px;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-        }
-        .service {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
+        .card {
+            border: none;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 22%;
-            text-align: center;
         }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #007bff;
-            color: #fff;
-            position: relative;
-            bottom: 0;
+        .card img {
+            height: 150px;
             width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Kleverix Media</h1>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Kleverix Media</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#feedback">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-</header>
-
-<div class="container">
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Copywriting</h3>
-                <p>Engaging and persuasive content tailored to your audience.</p>
-            </div>
-            <div class="service">
-                <h3>Data Entry</h3>
-                <p>Accurate and efficient data entry services to keep your business organized.</p>
-            </div>
-            <div class="service">
-                <h3>Website Designing</h3>
-                <p>Beautiful and responsive websites that reflect your brand.</p>
-            </div>
-            <div class="service">
-                <h3>Social Media Handling</h3>
-                <p>Expert management of your social media presence to boost engagement.</p>
+    <section id="home" class="section light">
+        <div class="container">
+            <h1 class="display-4">Welcome to Kleverix Media</h1>
+            <p class="lead">We provide a wide range of services to help you grow your business.</p>
+        </div>
+    </section>
+    <section id="services" class="section light">
+        <div class="container">
+            <h2 class="display-5">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/300x150/?typewriter" alt="Copywriting">
+                        <div class="card-body">
+                            <h5 class="card-title">Copywriting</h5>
+                            <p class="card-text">We craft compelling copy to engage your audience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/300x150/?office" alt="Data Entry">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Entry</h5>
+                            <p class="card-text">We provide accurate and efficient data entry services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/300x150/?web-design" alt="Website Designing">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Designing</h5>
+                            <p class="card-text">We design stunning websites to showcase your brand.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://source.unsplash.com/300x150/?social-media" alt="Social Media Handling">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Handling</h5>
+                            <p class="card-text">We help you manage your social media presence.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Kleverix Media is dedicated to providing top-notch digital services to help your business thrive in the online world. Our team of experts is committed to delivering quality and excellence in every project.</p>
+    <section id="feedback" class="section dark">
+        <div class="container">
+            <h2 class="display-5 text-light">Feedback</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name" class="text-light">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="text-light">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="feedback" class="text-light">Feedback:</label>
+                    <textarea class="form-control" id="feedback" rows="3" placeholder="Enter your feedback"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light">Submit</button>
+            </form>
+        </div>
     </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to discuss your project, feel free to reach out!</p>
-        <p>Email: info@kleverixmedia.com</p>
-        <p>Phone: +1 (234) 567-890</p>
+    <section id="contact" class="section light">
+        <div class="container">
+            <h2 class="display-5">Contact Us</h2>
+            <p class="lead">Get in touch with us for more information.</p>
+            <p>Email: <a href="mailto:info@kleverixmedia.com">info@kleverixmedia.com</a></p>
+            <p>Phone: +91 9451450367,+91 70681 00162</p>
+            <p>Address: Kleverix Media,U.P.,INDIA</p>
+        </div>
     </section>
-</div>
-
-<footer>
-    <p>&copy; 2023 Kleverix Media. All rights reserved.</p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

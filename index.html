@@ -1,94 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kleverix Media - Digital Services</title>
-    <!-- Linking the CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <title>Kleverix Media</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #hero {
+            text-align: center;
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 5rem 0;
+        }
+
+        .cta-button {
+            background: #f4a261;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
 <body>
-    <!-- Navigation -->
     <header>
+        <div class="logo">
+            <img src="images/kleverix-logo.png" alt="Kleverix Media Logo">
+        </div>
         <nav>
-            <div class="logo">
-                <h1>Kleverix Media</h1>
-            </div>
             <ul>
-                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#feedback">Feedback</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-content">
-            <h2>Your Digital Growth Partner</h2>
-            <p>We offer professional services in Copywriting, Data Entry, Web Design, and Social Media Handling.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
+        <h1>Welcome to Kleverix Media</h1>
+        <p>Your Partner in Creative Solutions</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </section>
 
-    <!-- Services Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Kleverix Media specializes in delivering innovative media and marketing solutions.</p>
+        <a href="https://reymedia.in/">Visit Ray Media</a>
+    </section>
+
     <section id="services">
         <h2>Our Services</h2>
-        <div class="service-container">
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Copywriting">
-                <h3>Copywriting</h3>
-                <p>Professional writing for your business needs.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Data Entry">
-                <h3>Data Entry</h3>
-                <p>Accurate and fast data management services.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Web Design">
-                <h3>Website Design</h3>
-                <p>Responsive and modern web design for your brand.</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300" alt="Social Media">
-                <h3>Social Media Handling</h3>
-                <p>Expert social media management to grow your business.</p>
-            </div>
+        <div class="service">
+            <h3>Content Creation</h3>
+            <p>High-quality content for your brand.</p>
+        </div>
+        <div class="service">
+            <h3>Media Management</h3>
+            <p>We handle all your media needs.</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Check out our recent work.</p>
+        <div class="gallery">
+            <img src="images/sample1.jpg" alt="Project 1">
+            <img src="images/sample2.jpg" alt="Project 2">
+            <img src="images/sample3.jpg" alt="Project 3">
+        </div>
+    </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+        <form action="#contact" method="post" id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Feedback:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
         </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+
+            // Database connection
+            $conn = new mysqli('localhost', 'root', '', 'feedback_db');
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "INSERT INTO feedback (name, email, message) VALUES ('$name', '$email', '$message')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "<p>Feedback submitted successfully!</p>";
+            } else {
+                echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
+            }
+
+            $conn->close();
+        }
+        ?>
     </section>
 
-    <!-- Feedback Section -->
-    <section id="feedback">
-        <h2>Feedback</h2>
-        <form id="feedback-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <textarea id="feedback-message" placeholder="Your Feedback" required></textarea>
-            <button type="submit">Submit Feedback</button>
-        </form>
-        <div id="feedback-list"></div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Kleverix Media. All rights reserved.</p>
     </footer>
 
-    <!-- Linking the JavaScript file -->
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            alert('Thank you for your feedback!');
+        });
+    </script>
 </body>
-
 </html>

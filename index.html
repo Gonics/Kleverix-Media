@@ -4,40 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleverix Media</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #f0f0f0;
         }
-        .hero {
-            background-image: linear-gradient(to bottom, #f7f7f7, #ffffff);
-            padding: 100px;
-            text-align: center;
+        .nav-link {
+            color: #000;
         }
-        .services {
-            padding: 50px;
-            background-color: #f7f7f7;
+        .hero-section {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/2000/1000');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
         }
-        .feedback {
-            padding: 50px;
-            background-color: #ffffff;
+        .learn-more {
+            cursor: pointer;
         }
-        .contact {
-            padding: 50px;
-            background-color: #f7f7f7;
+        .services-section {
+            background-color: #fff;
         }
-        .footer {
+        .portfolio-section {
+            background-color: #fff;
+        }
+        .achievements-section {
+            background-color: #fff;
+        }
+        .feedback-box {
+            width: 50%;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .help-desk-corner {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .contact-details-section {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Kleverix Media</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,83 +79,176 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#feedback">Feedback</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#">Help</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="hero">
-        <h1>Welcome to Kleverix Media</h1>
-        <p>We provide top-notch services in copywriting, data entry, website designing, and social media handling.</p>
-        <button type="button" class="btn btn-primary">Learn More</button>
-    </div>
-    <div class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <img src="https://picsum.photos/200/304" alt="Copywriting" width="100%">
-                <h3>Copywriting</h3>
-                <p>We craft compelling content that drives results.</p>
-            </div>
-            <div class="col-md-3">
-                <img src="https://picsum.photos/200/301" alt="Data Entry" width="100%">
-                <h3>Data Entry</h3>
-                <p>Accurate and efficient data entry services for your business.</p>
-            </div>
-            <div class="col-md-3">
-                <img src="https://picsum.photos/200/302" alt="Website Designing" width="100%">
-                <h3>Website Designing</h3>
-                <p>We build stunning websites that convert visitors into customers.</p>
-            </div>
-            <div class="col-md-3">
-                <img src="https://picsum.photos/200/303" alt="Social Media Handling" width="100%">
-                <h3>Social Media Handling</h3>
-                <p>Boost your online presence with our social media services.</p>
+    <section class="hero-section">
+        <h1 class="display-4">Welcome to Kleverix Media</h1>
+        <p class="lead">We are a digital marketing agency that helps businesses grow online.</p>
+        <button class="btn btn-primary learn-more" data-toggle="modal" data-target="#learnMoreModal">Learn More</button>
+    </section>
+    <section class="services-section">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/300" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Copywriting</h5>
+                            <p class="card-text">We help businesses create engaging content that drives results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/301" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Entry</h5>
+                            <p class="card-text">We provide accurate and efficient data entry services for businesses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/302" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Designing</h5>
+                            <p class="card-text">We help businesses create stunning websites that drive results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/303" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Social Media Handling</h5>
+                            <p class="card-text">We help businesses manage their social media presence and drive engagement.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="feedback" id="feedback">
+    </section>
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="text-center">Our Portfolio</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/300" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">This is a sample project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/301" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">This is another sample project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/302" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">This is a third sample project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="https://picsum.photos/200/303" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 4</h5>
+                            <p class="card-text">This is a fourth sample project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="achievements-section">
+        <div class="container">
+            <h2 class="text-center">Our Achievements</h2>
+            <p class="text-center">We have achieved great success in the digital marketing industry.</p>
+        </div>
+    </section>
+    <div class="feedback-box">
         <h2>Feedback</h2>
         <form>
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <input type="text" class="form-control" id="name" placeholder="Enter name">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea class="form-control" id="message" placeholder="Enter your message"></textarea>
+                <textarea class="form-control" id="message" placeholder="Enter message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    <div class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: +1 123 456 7890</p>
-        <p>Email: [info@kleverixmedia.com](mailto:info@kleverixmedia.com)</p>
-        <p>Address: 123 Main St, Anytown, USA</p>
-        <div class="social-media">
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="help-desk-corner">
+        <i class="fa fa-question-circle" aria-hidden="true"></i>
+    </div>
+    <section class="contact-details-section">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Get in touch with us:</p>
+            <p class="text-center">
+                <i class="fa fa-phone" aria-hidden="true"></i> +1234567890
+                <br>
+                <i class="fa fa-envelope" aria-hidden="true"></i> info@kleverixmedia.com
+                <br>
+                <i class="fa fa-map-marker" aria-hidden="true"></i> 123, Main Street, Anytown, USA
+                <br>
+                <i class="fa fa-licence" aria-hidden="true"></i> Licence Number: 123456
+            </p>
+            <p class="text-center">
+                <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+            </p>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="learnMoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="learnMoreModalLabel">Learn More</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>We are a digital marketing agency that helps businesses grow online. Our services include copywriting, data entry, website designing, and social media handling.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2023 Kleverix Media. All rights reserved.</p>
-        <a href="#services">Services</a> | <a href="#feedback">Feedback</a> | <a href="#contact">Contact</a>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/yourkit.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
